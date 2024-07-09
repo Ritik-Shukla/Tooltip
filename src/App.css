@@ -1,38 +1,114 @@
-.App {
+.container {
   text-align: center;
+  height: 57.4vh;
+  padding: 8rem;
+  color: rgb(8, 8, 8);
+}
+.selected {
+  background-color: rgb(168, 183, 185);
+
+}
+.button-container {
+  margin-left: 5rem;
+}
+.button-container button {
+  margin-right: 4rem;
+  margin-top: 2rem;
+  width: 70px;
+  height: 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 2px solid rgb(51, 51, 51);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.tooltipContainer {
+  position: relative;
+  display: inline-block;
+  border: 1px solid black;
+  margin-top: 8rem;
+  width: 9rem;
+  padding: 8px;
+  font-weight: bold;
+}
+.left {
+  padding: 5px;
+  border-radius: 10px;
+  position: relative;
+  left: 27%;
+  margin-top: -2rem;
+}
+.left::after {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  left: 100%; 
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent transparent black;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.right {
+  padding: 5px;
+  border-radius: 10px;
+  position: relative;
+  left: 58%;
+  margin-top: -2rem;
+}
+.right::after {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  right: 100%; 
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent black transparent transparent;
+}
+.top {
+  padding: 5px;
+  border-radius: 10px;
+  position: relative;
+  left: 42%;
+  margin-top: -95px;
+}
+.top::after {
+  content: " ";
+  position: absolute;
+  top: 100%; 
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+.bottom {
+  padding: 5px;
+  border-radius: 10px;
+  width: fit-content;
+  position: relative;
+  left: 43%;
+  margin-top: 1rem;
+  width: 30px;
+}
+.bottom::after {
+  content: " ";
+  position: absolute;
+  bottom: 100%; 
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent black transparent;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#tooltipText {
+  display: block;
+  background-color: rgb(57, 57, 57);
+  color: rgb(228, 228, 228);
+  font-weight:700;
+  width: 9rem;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+  transition-delay: 0s;
 }
